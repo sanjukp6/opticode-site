@@ -488,7 +488,7 @@ function App() {
 
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Non-Optimized */}
-            <div className="relative group animate-fade-in-left">
+            <div className="relative group animate-fade-in-left min-w-0">
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative bg-slate-900/90 backdrop-blur-xl border border-red-500/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-red-400/50 transition-all duration-300">
                 <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-4 border-b border-red-500/30 flex items-center justify-between">
@@ -522,7 +522,7 @@ System.out.println(result); // 15`}
             </div>
 
             {/* Optimized */}
-            <div className="relative group animate-fade-in-right">
+            <div className="relative group animate-fade-in-right min-w-0">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative bg-slate-900/90 backdrop-blur-xl border border-green-500/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-green-400/50 transition-all duration-300">
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-4 border-b border-green-500/30 flex items-center justify-between">
@@ -987,6 +987,8 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
         /* PERFECTLY CENTERED CODE SCROLL CONTAINER */
         .code-scroll-container {
           width: 100%;
+          max-width: 100%;
+          min-width: 0;
           overflow-x: auto;
           overflow-y: hidden;
           -webkit-overflow-scrolling: touch;
@@ -1022,7 +1024,6 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
           color: #d1d5db;
           white-space: pre;
           tab-size: 4;
-          min-width: fit-content;
         }
 
         @media (min-width: 640px) {
