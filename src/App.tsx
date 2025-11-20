@@ -859,7 +859,7 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
 
           <div className="space-y-3 sm:space-y-4">
             {[
-              { q: "When does the contest start?", a: "OPTICODE begins on March 26, 2025 at 2:00 PM. You'll have the day to submit your solutions." },
+              { q: "When does the contest start?", a: "OPTICODE begins on November 26, 2025 at 2:00 PM. You'll have the day to submit your solutions." },
               { q: "What languages are supported?", a: "Python, Java and C are all supported. Choose your favorite!" },
               { q: "How is code length measured?", a: "We count non-empty, non-comment lines. The HackerRank platform automatically counts for accuracy." },
               { q: "Can I team up?", a: "OPTICODE is an individual competition. Each participant competes solo for the best leaderboard placement." },
