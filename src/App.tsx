@@ -603,7 +603,7 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl bg-slate-800/50 border border-cyan-500/20 text-white placeholder-gray-500 focus:border-cyan-400/50 focus:outline-none transition-all duration-300 focus:scale-105 backdrop-blur-sm tracking-wide text-sm sm:text-base"
-                    placeholder="John Doe"
+                    placeholder="your name"
                   />
                 </div>
                 <div className="animate-fade-in-up animation-delay-100">
@@ -859,11 +859,11 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
 
           <div className="space-y-3 sm:space-y-4">
             {[
-              { q: "When does the contest start?", a: "OPTICODE begins on March 26, 2025 at 10:00 AM. You'll have the day to submit your solutions." },
-              { q: "What languages are supported?", a: "Python, Java, C++, JavaScript, C#, Go, and Rust are all supported. Choose your favorite!" },
+              { q: "When does the contest start?", a: "OPTICODE begins on March 26, 2025 at 2:00 PM. You'll have the day to submit your solutions." },
+              { q: "What languages are supported?", a: "Python, Java and C are all supported. Choose your favorite!" },
               { q: "How is code length measured?", a: "We count non-empty, non-comment lines. The HackerRank platform automatically counts for accuracy." },
               { q: "Can I team up?", a: "OPTICODE is an individual competition. Each participant competes solo for the best leaderboard placement." },
-              { q: "Are there entry fees?", a: "Completely free! Registration is open to all students worldwide with no hidden costs." },
+              { q: "Are there entry fees?", a: "Completely free! Registration is open to all students of CSE allied branches with no hidden costs." },
               { q: "Will I get a certificate?", a: "Yes! All participants will receive certificates of participation and top performers get special recognition certificates." }
             ].map((faq, idx) => (
               <button
