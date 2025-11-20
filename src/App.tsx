@@ -467,8 +467,8 @@ function App() {
       </section>
 
       {/* Challenge Example Section - PERFECTLY FIXED SCROLL */}
-      <section className="relative py-16 sm:py-24 lg:py-28 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-16 sm:py-24 lg:py-28 px-4 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
             <div className="inline-block mb-3 sm:mb-4">
               <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs sm:text-sm font-semibold uppercase tracking-widest font-orbitron">
@@ -486,21 +486,21 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {/* Non-Optimized */}
-            <div className="relative group animate-fade-in-left min-w-0">
+            <div className="relative group animate-fade-in-left min-w-0 w-full">
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="relative bg-slate-900/90 backdrop-blur-xl border border-red-500/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-red-400/50 transition-all duration-300">
-                <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-4 border-b border-red-500/30 flex items-center justify-between">
-                  <div className="flex items-center gap-2 sm:gap-3">
+              <div className="relative bg-slate-900/90 backdrop-blur-xl border border-red-500/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-red-400/50 transition-all duration-300 w-full">
+                <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 border-b border-red-500/30 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
                     <div className="flex gap-1 sm:gap-1.5">
                       <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-red-500"></div>
                       <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
                       <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-red-400 font-jetbrains text-[10px] sm:text-xs md:text-sm font-semibold whitespace-nowrap">❌ Non-Optimized</span>
+                    <span className="text-red-400 font-jetbrains text-[9px] sm:text-xs md:text-sm font-semibold">❌ Non-Optimized</span>
                   </div>
-                  <span className="text-red-400/60 font-jetbrains text-[9px] sm:text-[10px] md:text-xs whitespace-nowrap">10 lines</span>
+                  <span className="text-red-400/60 font-jetbrains text-[8px] sm:text-[10px] md:text-xs flex-shrink-0">10 lines</span>
                 </div>
                 {/* Fixed scroll container */}
                 <div className="code-scroll-container">
@@ -522,19 +522,19 @@ System.out.println(result); // 15`}
             </div>
 
             {/* Optimized */}
-            <div className="relative group animate-fade-in-right min-w-0">
+            <div className="relative group animate-fade-in-right min-w-0 w-full">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="relative bg-slate-900/90 backdrop-blur-xl border border-green-500/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-green-400/50 transition-all duration-300">
-                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-4 border-b border-green-500/30 flex items-center justify-between">
-                  <div className="flex items-center gap-2 sm:gap-3">
+              <div className="relative bg-slate-900/90 backdrop-blur-xl border border-green-500/30 rounded-xl sm:rounded-2xl overflow-hidden hover:border-green-400/50 transition-all duration-300 w-full">
+                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 border-b border-green-500/30 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
                     <div className="flex gap-1 sm:gap-1.5">
                       <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-red-500"></div>
                       <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
                       <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-green-400 font-jetbrains text-[10px] sm:text-xs md:text-sm font-semibold whitespace-nowrap">✓ Optimized</span>
+                    <span className="text-green-400 font-jetbrains text-[9px] sm:text-xs md:text-sm font-semibold">✓ Optimized</span>
                   </div>
-                  <span className="text-green-400/60 font-jetbrains text-[9px] sm:text-[10px] md:text-xs whitespace-nowrap">4 lines</span>
+                  <span className="text-green-400/60 font-jetbrains text-[8px] sm:text-[10px] md:text-xs flex-shrink-0">4 lines</span>
                 </div>
                 {/* Fixed scroll container */}
                 <div className="code-scroll-container">
@@ -995,6 +995,14 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
           scroll-behavior: smooth;
           scrollbar-width: thin;
           scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+          box-sizing: border-box;
+        }
+        
+        @media (max-width: 640px) {
+          .code-scroll-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
         }
 
         .code-scroll-container::-webkit-scrollbar {
@@ -1017,19 +1025,23 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
         .code-block {
           display: block;
           margin: 0;
-          padding: 0.75rem;
+          padding: 0.5rem;
           font-family: 'JetBrains Mono', monospace;
-          font-size: 10px;
-          line-height: 1.6;
+          font-size: 8px;
+          line-height: 1.5;
           color: #d1d5db;
-          white-space: pre;
-          tab-size: 4;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          tab-size: 2;
+          max-width: 100%;
         }
 
         @media (min-width: 640px) {
           .code-block {
-            padding: 1rem;
-            font-size: 12px;
+            padding: 0.75rem;
+            font-size: 10px;
+            white-space: pre;
           }
         }
 
@@ -1228,11 +1240,26 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
         /* Smooth scrolling */
         html {
           scroll-behavior: smooth;
+          overflow-x: hidden;
+        }
+        
+        body {
+          overflow-x: hidden;
+          max-width: 100vw;
         }
 
         /* Touch scrolling optimization for mobile */
         * {
           -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Prevent horizontal overflow on mobile */
+        @media (max-width: 640px) {
+          body, html {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+          }
         }
       `}</style>
     </div>
