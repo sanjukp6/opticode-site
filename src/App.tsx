@@ -26,6 +26,8 @@ function App() {
     document.head.appendChild(link);
   }, []);
 
+  const asset = (file: string) => `${import.meta.env.BASE_URL}${file}`;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return;
@@ -176,17 +178,17 @@ function App() {
             {/* Three Logos in a row */}
             <div className="flex items-center justify-center gap-4 sm:gap-8">
               <img
-                src="/technical_club-removebg-preview.png"
+                src={asset('technical_club-removebg-preview.png')}
                 alt="Left logo"
                 className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-[0_0_25px_rgba(34,211,238,0.35)]"
               />
               <img
-                src="/biet-logo.png"
+                src={asset('biet-logo.png')}
                 alt="Bapuji Institute of Engineering and Technology logo"
                 className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-[0_0_25px_rgba(34,211,238,0.35)]"
               />
               <img
-                src="/ISTE.png"
+                src={asset('ISTE.png')}
                 alt="Right logo"
                 className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-[0_0_25px_rgba(34,211,238,0.35)]"
               />
@@ -758,10 +760,10 @@ System.out.println(sumArray(new int[]{1, 2, 3, 4, 5})); // 15`}
   </h3>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
     {[
-  { name: 'Vishwanath V K', role: 'Club Coordinator', dept: 'CSE', image: '/vishwanath.jpeg' },
-  { name: 'Radhika Priya', role: 'Club President', dept: 'EC', image: '/radhika.jpeg' },
-  { name: 'Dr. Nirmala C R', role: 'Head of the Department', dept: 'CSE', image: '/nirmala-cr.jpeg' },
-  { name: 'Vinutha H P', role: 'Head of SWC', dept: 'ISE', image: '/Vinutha.jpeg' }
+    { name: 'Vishwanath V K', role: 'Club Coordinator', dept: 'CSE', image: asset('vishwanath.jpeg') },
+    { name: 'Radhika Priya', role: 'Club President', dept: 'EC', image: asset('radhika.jpeg') },
+    { name: 'Dr. Nirmala C R', role: 'Head of the Department', dept: 'CSE', image: asset('nirmala-cr.jpeg') },
+    { name: 'Vinutha H P', role: 'Head of SWC', dept: 'ISE', image: asset('Vinutha.jpeg') }
 ].map((faculty, idx) => (
   <div key={idx} className="relative group animate-fade-in-up" style={{ animationDelay: `${idx * 100}ms` }}>
     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
